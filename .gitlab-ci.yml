@@ -5,6 +5,7 @@ push-develop-to-kabam:
   stage: push-develop-to-kabam
   script:
     - git checkout master
+    - git pull
     - git push https://$GITHUB_AUTH_TOKEN@github.com/$GITHUB_USERNAME/test-pushes-automatization.git master
   only:
     - master
